@@ -54,7 +54,7 @@ const About = () => {
         <div className="w-full md:w-1/2 pt-12 md:pt-0">
           <h2 className="about-text text-sm uppercase tracking-widest text-primary-400 font-semibold mb-3">About Us</h2>
           <h3 className="about-text text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            We are architects of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-600">modern business</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-600">Our Story</span>
           </h3>
           <p className="about-text text-gray-400 text-lg mb-6 leading-relaxed">
             From zero to $1.5M in three years selling home and kitchen products on Amazon as a amazon seller, I learned every lesson the hard way.
