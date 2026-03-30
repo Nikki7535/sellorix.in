@@ -1,11 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import p1 from '../assets/p1.png';
+import p2 from '../assets/p2.jpg';
+import p3 from '../assets/p3.png';
+import p4 from '../assets/p4.png';
+import newP1 from '../assets/new_P1.png';
+import newP2 from '../assets/new_p2.png';
 import {
   ChevronLeft, ChevronRight, MapPin, Clock, Globe, ArrowRight,
   MousePointer2, Settings, Image as ImageIcon, Search, Megaphone,
   BarChart3, Sliders, CheckCircle2, TrendingUp, ShieldCheck,
-  Zap, Package, Star, Users, Award, ChevronDown
+  Zap, Package, Star, Users, Award, ChevronDown, Target, Brain, Trophy
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,7 +83,7 @@ const servicesData = [
   },
   {
     id: 'merchandising',
-    title: 'Merchandising',
+    title: 'Catalogue',
     subtitle: 'Your Catalog, Perfectly Optimized',
     icon: MousePointer2,
     color: 'purple',
@@ -93,7 +99,7 @@ const servicesData = [
       'Enhanced brand content management',
       'Seasonal promotional updates',
     ],
-    stat: { value: '400+', label: 'Active Brands Managed' },
+    stat: { value: '30+', label: 'Active Brands Managed' },
     visual: <MerchandisingVisual />,
   },
   {
@@ -235,16 +241,31 @@ function SEOVisual() {
 }
 
 function DesignVisual() {
+  const portfolio = [
+    { label: 'Main Image', img: p1, border: 'border-orange-500/30', badge: 'bg-orange-500/20 text-orange-400' },
+    { label: 'A+ Content', img: p2, border: 'border-pink-500/30', badge: 'bg-pink-500/20 text-pink-400' },
+    { label: 'Brand Store', img: p3, border: 'border-purple-500/30', badge: 'bg-purple-500/20 text-purple-400' },
+    { label: 'Infographic', img: p4, border: 'border-blue-500/30', badge: 'bg-blue-500/20 text-blue-400' },
+  ];
   return (
     <div className="w-full h-full bg-[#0d1117] rounded-2xl border border-white/10 p-6 flex flex-col gap-4">
       <span className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Design Portfolio</span>
       <div className="grid grid-cols-2 gap-3 flex-1">
-        {['Main Image', 'A+ Content', 'Brand Store', 'Infographic'].map((label, i) => (
-          <div key={label} className="rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 flex flex-col items-center justify-center p-4 gap-2">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${['bg-orange-500/20 text-orange-400', 'bg-pink-500/20 text-pink-400', 'bg-purple-500/20 text-purple-400', 'bg-blue-500/20 text-blue-400'][i]}`}>
-              <ImageIcon className="w-5 h-5" />
+        {portfolio.map(({ label, img, border, badge }) => (
+          <div
+            key={label}
+            className={`rounded-xl overflow-hidden border ${border} flex flex-col group relative h-36`}
+          >
+            <div className="overflow-hidden" style={{ height: 'calc(100% - 28px)' }}>
+              <img
+                src={img}
+                alt={label}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
-            <span className="text-xs font-semibold text-gray-300 text-center">{label}</span>
+            <div className={`h-7 flex items-center justify-center text-center text-xs font-semibold ${badge} backdrop-blur-sm shrink-0`}>
+              {label}
+            </div>
           </div>
         ))}
       </div>
@@ -303,12 +324,12 @@ function CTRVisual() {
       <span className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">A/B Test Results</span>
       <div className="grid grid-cols-2 gap-4">
         {[
-          { label: 'Variant A (Control)', ctr: '0.28%', bg: 'from-white/5', wins: false },
-          { label: 'Variant B (Optimized)', ctr: '0.61%', bg: 'from-orange-500/10', wins: true },
+          { label: 'Variant A (Control)', ctr: '0.28%', bg: 'from-white/5', wins: false, img: newP1 },
+          { label: 'Variant B (Optimized)', ctr: '0.61%', bg: 'from-orange-500/10', wins: true, img: newP2 },
         ].map(v => (
           <div key={v.label} className={`rounded-2xl bg-gradient-to-br ${v.bg} to-transparent border ${v.wins ? 'border-orange-500/40' : 'border-white/10'} p-4 flex flex-col gap-3`}>
-            <div className="w-full aspect-square bg-white/5 rounded-xl flex items-center justify-center">
-              <Package className={`w-10 h-10 ${v.wins ? 'text-orange-400' : 'text-gray-600'}`} />
+            <div className="w-full aspect-square bg-white/5 rounded-xl overflow-hidden flex items-center justify-center">
+              <img src={v.img} alt={v.label} className="w-full h-full object-cover" />
             </div>
             <span className="text-xs text-gray-400 text-center">{v.label}</span>
             <div className="text-center">
@@ -330,7 +351,7 @@ function ReportingVisual() {
     <div className="w-full h-full bg-[#0d1117] rounded-2xl border border-white/10 p-6 flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Weekly Sales</span>
-        <span className="text-xs text-green-400 font-bold flex items-center gap-1"><TrendingUp className="w-3 h-3" /> +23% vs last week</span>
+        <span className="text-xs text-green-400 font-bold flex items-center gap-1"><TrendingUp className="w-3 h-3" /> +42% vs last week</span>
       </div>
       <div className="flex items-end gap-2 h-32">
         {bars.map((h, i) => (
@@ -343,7 +364,7 @@ function ReportingVisual() {
         ))}
       </div>
       <div className="grid grid-cols-3 gap-2 pt-2 border-t border-white/5">
-        {[['Revenue', '$48.2K'], ['Orders', '1,284'], ['Units', '2,109']].map(([k, v]) => (
+        {[['Revenue', '$50K'], ['Orders', '1367'], ['Units', '2,109']].map(([k, v]) => (
           <div key={k} className="text-center">
             <div className="text-base font-black text-white">{v}</div>
             <div className="text-[10px] text-gray-500 uppercase">{k}</div>
@@ -422,6 +443,15 @@ const FullServiceManagement = () => {
         {
           opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: 'power2.out',
           scrollTrigger: { trigger: '.stats-section', start: 'top 80%', once: true },
+        }
+      );
+
+      // Roadmap grid items
+      gsap.fromTo('.roadmap-card',
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out',
+          scrollTrigger: { trigger: '.roadmap-grid', start: 'top 80%', once: true },
         }
       );
 
@@ -535,21 +565,76 @@ const FullServiceManagement = () => {
         </div>
       </section>
 
-      {/* ─── INTRO TEXT ─── */}
-      <section className="py-20 px-6 md:px-12 max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          The Profit-First Roadmap to{' '}
-          <span className="text-orange-500">$1M+</span>
-        </h2>
-        <p className="text-gray-400 text-lg leading-relaxed">
-          PPC Surgery: Cutting wasted spend and scaling winning keywords with precision.<br>
-          </br>
-          Listing Psychology: Writing copy and designing images that force customers to click "Buy."<br>
-          </br>
-          Ranking Domination: Moving your products to Page 1 using data, not luck.<br></br>
-          Account Health: Keeping your store safe from suspensions and inventory stock-outs.
+      {/* ─── ROADMAP ICON GRID ─── */}
+      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            The Profit-First Roadmap to{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">
+              $1M+
+            </span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Our systematic approach eliminates guesswork and shifts your Amazon store into overdrive.
+          </p>
+        </div>
 
-        </p>
+        <div className="roadmap-grid grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              icon: Target,
+              title: 'PPC Surgery',
+              desc: 'Cutting wasted spend and scaling winning keywords with surgical precision.',
+              color: 'text-orange-500',
+              bg: 'bg-orange-500/10',
+              border: 'border-orange-500/20'
+            },
+            {
+              icon: Brain,
+              title: 'Listing Psychology',
+              desc: 'Writing copy and designing images that trigger curiosity and force customers to click "Buy."',
+              color: 'text-blue-400',
+              bg: 'bg-blue-500/10',
+              border: 'border-blue-500/20'
+            },
+            {
+              icon: TrendingUp,
+              title: 'Ranking Domination',
+              desc: 'Moving your products to Page 1 using data-backed strategies, not luck.',
+              color: 'text-green-400',
+              bg: 'bg-green-500/10',
+              border: 'border-green-500/20'
+            },
+            {
+              icon: ShieldCheck,
+              title: 'Account Health',
+              desc: 'Keeping your store safe from suspensions and avoiding costly inventory stock-outs.',
+              color: 'text-yellow-400',
+              bg: 'bg-yellow-500/10',
+              border: 'border-yellow-500/20'
+            },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="roadmap-card group relative p-8 rounded-3xl bg-[#0d1117] border border-white/10 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+            >
+              {/* Subtle hover gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6 border ${item.border}`}>
+                <item.icon className={`w-7 h-7 ${item.color}`} />
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm leading-relaxed relative z-10">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* ─── ALTERNATING SERVICE SECTIONS ─── */}
@@ -625,9 +710,9 @@ const FullServiceManagement = () => {
               <span className="text-xs font-bold tracking-[0.3em] uppercase mt-2 opacity-50">IN USA</span>
             </div>
             <div className="flex flex-col gap-2">
-              <h4 className="text-xl font-bold text-white">Client growth = company growth</h4>
+              <h4 className="text-xl font-bold text-white">Your Profit is My Priority</h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We're proud to be the 334th Fastest Growing Company in the USA, serving over 400 Amazon brands with 500+ full-time experts.
+                Most agencies just talk about clicks. Sellorix actually talks about profit. In just 4 months, my ACOS dropped by 15% while our organic ranking hit the top of Page 1. Truly a seller's agency.
               </p>
             </div>
           </div>
@@ -654,7 +739,7 @@ const FullServiceManagement = () => {
       {/* ─── BOTTOM FEATURES GRID ─── */}
       <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Built on <span className="text-orange-500">operational excellence</span>
+          Built on <span className="text-orange-500"> real-world results</span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[

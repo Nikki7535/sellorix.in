@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import aboutUsImg from '../assets/about_us.png'
 
 const About = () => {
   const containerRef = useRef(null)
@@ -40,9 +41,9 @@ const About = () => {
           <div className="absolute inset-0 bg-primary-600/20 blur-[60px] rounded-full point-events-none" />
           <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80"
+              src={aboutUsImg}
               alt="Consultancy Team"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+              className="w-full h-full object-cover hover:grayscale-0 transition-all duration-700 hover:scale-105"
             />
           </div>
           <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl flex flex-col items-center justify-center shadow-xl">
@@ -54,7 +55,7 @@ const About = () => {
         <div className="w-full md:w-1/2 pt-12 md:pt-0">
           <h2 className="about-text text-sm uppercase tracking-widest text-primary-400 font-semibold mb-3">About Us</h2>
           <h3 className="about-text text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-600">Our Story</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-600">My Story</span>
           </h3>
           <p className="about-text text-gray-400 text-lg mb-6 leading-relaxed">
             From zero to $1.5M in three years selling home and kitchen products on Amazon as a amazon seller, I learned every lesson the hard way.

@@ -10,6 +10,7 @@ import Clients from './components/Clients'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import HowItWorks from './components/HowItWorks'
+import Testimonials from './components/Testimonials';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import FullServiceManagement from './pages/FullServiceManagement';
@@ -28,6 +29,7 @@ function HomePage() {
       <Hero />
       <Services />
       <HowItWorks />
+      <Testimonials />
       <Clients />
     </main>
   );

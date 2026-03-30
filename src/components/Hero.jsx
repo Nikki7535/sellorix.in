@@ -81,7 +81,7 @@ const Hero = () => {
           </div>
 
           <h1 className="hero-left-child text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white">
-            Stop Scaling.{' '}
+            Stop Guessing. {' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
               Start Scaling
             </span>{' '}

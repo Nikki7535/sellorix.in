@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ppc1 from '../assets/ppc_service_1st.webp';
+import ppcAds from '../assets/ppc_service_1st.webp';
 import {
   ArrowRight, Target, DollarSign, Search, Database, FlaskConical, BarChart3,
   Rocket, TrendingUp, CheckCircle2, Image as ImageIcon, Video, ShoppingBag, Eye,
@@ -59,8 +61,8 @@ const PpcManagement = () => {
 
     const timer = setTimeout(() => {
       // Hero Elements
-      gsap.fromTo('.anim-up', 
-        { opacity: 0, y: 40 }, 
+      gsap.fromTo('.anim-up',
+        { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
       );
 
@@ -71,9 +73,9 @@ const PpcManagement = () => {
 
       // Scroll triggered elements
       gsap.utils.toArray('.scroll-fade-up').forEach((el) => {
-        gsap.fromTo(el, 
+        gsap.fromTo(el,
           { opacity: 0, y: 30 },
-          { 
+          {
             opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
             scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
           }
@@ -100,11 +102,11 @@ const PpcManagement = () => {
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-orange-500/30 overflow-x-hidden pt-32 pb-20">
-      
+
       {/* ─── HERO ─── */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center mb-32 relative">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[120px] pointer-events-none" />
-        
+
         <div className="flex flex-col gap-6 z-10">
           <div className="anim-up inline-flex">
             <span className="bg-orange-500/10 border border-orange-500/20 text-orange-400 text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full">
@@ -112,10 +114,10 @@ const PpcManagement = () => {
             </span>
           </div>
           <h1 className="anim-up text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
-            Amazon <br/>
+            Amazon <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">
-              advertising 
-            </span><br/>
+              advertising
+            </span><br />
             management
           </h1>
           <p className="anim-up text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
@@ -131,28 +133,28 @@ const PpcManagement = () => {
         {/* Hero Visual */}
         <div className="anim-slide-left relative flex justify-center lg:justify-end z-10">
           <div className="w-full max-w-[450px] bg-[#0E121E] rounded-3xl border border-white/10 p-6 flex flex-col gap-4 shadow-2xl">
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Sponsored</span>
-                <span className="bg-yellow-500 text-black text-[10px] font-black uppercase px-2 py-0.5 rounded-sm">Ad</span>
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Sponsored</span>
+              <span className="bg-yellow-500 text-black text-[10px] font-black uppercase px-2 py-0.5 rounded-sm">Ad</span>
+            </div>
+            <div className="w-full h-52 rounded-2xl relative overflow-hidden group">
+              <img src={ppc1} alt="Sponsored Product" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-white mb-1">Premium Matcha Green Tea Powder</h3>
+              <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
+                <div className="flex text-yellow-500"><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /></div>
+                449 ratings
               </div>
-              <div className="w-full aspect-video bg-white/5 rounded-2xl flex items-center justify-center p-8 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <ImageIcon className="w-16 h-16 text-gray-600 group-hover:scale-110 transition-transform duration-500" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-1">Premium Matcha Green Tea Powder</h3>
-                <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-                  <div className="flex text-yellow-500"><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /><Star className="w-4 h-4 fill-yellow-500" /></div>
-                  12,845 ratings
-                </div>
-                <div className="text-2xl font-black text-white">$24.99</div>
-              </div>
+              <div className="text-2xl font-black text-white">$39.99</div>
+            </div>
           </div>
           {/* Floating badge */}
           <div className="absolute -right-6 md:-right-10 top-1/2 -translate-y-1/2 bg-[#1A202E] border border-orange-500/30 p-5 rounded-2xl shadow-xl flex flex-col items-center gap-1 z-20">
-             <TrendingUp className="w-8 h-8 text-green-400 mb-1" />
-             <span className="text-2xl font-black text-white">4.2x</span>
-             <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Avg. ROAS</span>
+            <TrendingUp className="w-8 h-8 text-green-400 mb-1" />
+            <span className="text-2xl font-black text-white">6.46x</span>
+            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Avg. ROAS</span>
           </div>
         </div>
       </section>
@@ -187,10 +189,10 @@ const PpcManagement = () => {
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-32 text-center scroll-fade-up">
         <h4 className="text-sm font-bold tracking-widest uppercase text-gray-500 mb-10">Serving global brands around the world</h4>
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-           {/* Placeholders for logos */}
-           {['Himalaya', 'Honeywell', 'Vicks', 'chicco', "L'ORÈAL", 'Durex'].map(brand => (
-             <div key={brand} className="text-2xl md:text-3xl font-black tracking-tighter hover:text-orange-400 transition-colors cursor-default">{brand}</div>
-           ))}
+          {/* Placeholders for logos */}
+          {['Himalaya', 'Honeywell', 'Vicks', 'chicco', "L'ORÈAL", 'Durex'].map(brand => (
+            <div key={brand} className="text-2xl md:text-3xl font-black tracking-tighter hover:text-orange-400 transition-colors cursor-default">{brand}</div>
+          ))}
         </div>
       </section>
 
@@ -199,10 +201,10 @@ const PpcManagement = () => {
         <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-3xl p-1 md:p-1.5 overflow-hidden">
           <div className="bg-[#0E121E] rounded-[1.3rem] md:rounded-[1.2rem] p-8 md:p-16 grid lg:grid-cols-2 gap-12 items-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-yellow-500/10 blur-[100px] rounded-full pointer-events-none" />
-            
+
             <div className="z-10 relative">
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Win with <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">PPC advertising</span>
+                Win with <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">PPC advertising</span>
               </h2>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-md">
                 Turn clicks into customers. We blend advanced machine learning with human expertise to supercharge your campaigns.
@@ -213,26 +215,21 @@ const PpcManagement = () => {
             </div>
 
             <div className="z-10 relative bg-[#1A202E] border border-white/10 rounded-2xl p-6 shadow-2xl">
-               <div className="flex justify-between items-center mb-6">
-                  <div>
-                    <h4 className="text-white font-bold text-lg">Sales vs ACoS</h4>
-                    <span className="text-xs text-green-400 font-bold">+142% Year over Year</span>
-                  </div>
-                  <BarChart3 className="text-yellow-500 w-6 h-6" />
-               </div>
-               <div className="flex items-end gap-2 h-40">
-                  {[20, 35, 30, 50, 45, 70, 60, 90, 85, 100].map((h, i) => (
-                    <div key={i} className="flex-1 flex flex-col justify-end group">
-                       <div className="w-full bg-yellow-500/20 rounded-t-sm group-hover:bg-yellow-500/40 transition-colors relative" style={{height: `${h}%`}}>
-                         <div className="absolute top-0 w-full h-1 bg-yellow-500" />
-                       </div>
-                    </div>
-                  ))}
-               </div>
-               <div className="mt-4 flex gap-4 text-xs font-bold text-gray-500 justify-center uppercase tracking-wider">
-                  <div className="flex items-center gap-1"><div className="w-2 h-2 bg-yellow-500 rounded-sm" /> Sales</div>
-                  <div className="flex items-center gap-1"><div className="w-2 h-2 bg-purple-500 rounded-sm" /> ACoS Limit</div>
-               </div>
+              <div className="flex justify-between items-center mb-6">
+                <div>
+                  <h4 className="text-white font-bold text-lg">Sales vs ACoS</h4>
+                  <span className="text-xs text-green-400 font-bold">+142% Year over Year</span>
+                </div>
+                <BarChart3 className="text-yellow-500 w-6 h-6" />
+              </div>
+              <div className="relative w-full h-40 rounded-xl overflow-hidden">
+                <img src={ppcAds} alt="Sales vs ACoS chart" className="w-full h-full object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A202E]/60 to-transparent" />
+              </div>
+              <div className="mt-4 flex gap-4 text-xs font-bold text-gray-500 justify-center uppercase tracking-wider">
+                <div className="flex items-center gap-1"><div className="w-2 h-2 bg-yellow-500 rounded-full" /> Sales</div>
+                <div className="flex items-center gap-1"><div className="w-2 h-2 bg-orange-500 rounded-full" /> ACoS Limit</div>
+              </div>
             </div>
           </div>
         </div>
@@ -249,15 +246,15 @@ const PpcManagement = () => {
               <p className="text-[10px] text-gray-500 mt-auto">2026 Edition</p>
             </div>
             <div className="h-20 bg-white/5 flex items-center justify-center border-t border-white/5">
-               <ImageIcon className="text-gray-600 w-8 h-8 group-hover:scale-110 transition-transform" />
+              <ImageIcon className="text-gray-600 w-8 h-8 group-hover:scale-110 transition-transform" />
             </div>
           </div>
           <div className="flex-1 text-center md:text-left">
-             <h3 className="text-2xl md:text-3xl font-bold mb-4">Grow sales with our <span className="text-orange-500">Amazon PPC Guide</span></h3>
-             <p className="text-gray-400 mb-6 max-w-md">Unlock the secrets of 6-figure sellers. Download our comprehensive guide to mastering Amazon advertising completely free.</p>
-             <button className="flex items-center justify-center md:justify-start gap-2 text-sm font-bold uppercase tracking-widest text-orange-400 hover:text-orange-300 transition-colors">
-               <Download className="w-4 h-4" /> Download our guide
-             </button>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Grow sales with our <span className="text-orange-500">Amazon PPC Guide</span></h3>
+            <p className="text-gray-400 mb-6 max-w-md">Unlock the secrets of 6-figure sellers. Download our comprehensive guide to mastering Amazon advertising completely free.</p>
+            <button className="flex items-center justify-center md:justify-start gap-2 text-sm font-bold uppercase tracking-widest text-orange-400 hover:text-orange-300 transition-colors">
+              <Download className="w-4 h-4" /> Download our guide
+            </button>
           </div>
         </div>
       </section>
@@ -266,27 +263,27 @@ const PpcManagement = () => {
       <section className="bg-[#0E121E] border-y border-white/5 py-24 mb-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16 scroll-fade-up">
-             <span className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Our Process</span>
-             <h2 className="text-3xl md:text-5xl font-bold mb-6">Amazon PPC <span className="text-orange-500">strategy</span></h2>
-             <p className="text-gray-400 text-lg">We follow a proven lifecycle for every campaign to ensure maximum profitability and ongoing scale.</p>
+            <span className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2 block">Our Process</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Amazon PPC <span className="text-orange-500">strategy</span></h2>
+            <p className="text-gray-400 text-lg">We follow a proven lifecycle for every campaign to ensure maximum profitability and ongoing scale.</p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 md:gap-0 relative pipeline-container">
-             {/* Connection Line */}
-             <div className="hidden md:block absolute top-[4.5rem] left-10 right-10 h-0.5 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 opacity-20" />
-             
-             {strategySteps.map((step, i) => (
-               <div key={i} className="pipeline-step flex-1 flex flex-col items-center text-center px-4 relative">
-                  <div className={`w-20 h-20 rounded-full bg-gradient-to-b ${step.bg} to-transparent border border-white/10 flex items-center justify-center mb-6 z-10 mx-auto backdrop-blur-xl shadow-xl shadow-black`}>
-                    <step.icon className={`w-8 h-8 ${step.color}`} />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <span className="text-gray-600 font-black text-2xl">0{i+1}</span>
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed max-w-xs mx-auto">{step.desc}</p>
-               </div>
-             ))}
+            {/* Connection Line */}
+            <div className="hidden md:block absolute top-[4.5rem] left-10 right-10 h-0.5 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 opacity-20" />
+
+            {strategySteps.map((step, i) => (
+              <div key={i} className="pipeline-step flex-1 flex flex-col items-center text-center px-4 relative">
+                <div className={`w-20 h-20 rounded-full bg-gradient-to-b ${step.bg} to-transparent border border-white/10 flex items-center justify-center mb-6 z-10 mx-auto backdrop-blur-xl shadow-xl shadow-black`}>
+                  <step.icon className={`w-8 h-8 ${step.color}`} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                  <span className="text-gray-600 font-black text-2xl">0{i + 1}</span>
+                  {step.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -299,140 +296,140 @@ const PpcManagement = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-           {pillars.map((p, i) => (
-             <div key={i} className="bg-white/[0.02] border border-white/5 p-8 rounded-3xl flex flex-col h-full hover:bg-white/[0.04] transition-colors group">
-                <div className="text-4xl font-black text-white/5 mb-4 group-hover:text-orange-500/10 transition-colors">0{i+1}</div>
-                <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-8">{p.desc}</p>
-                <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-orange-500 hover:text-orange-400 transition-colors w-fit">
-                  Read more <ChevronRight className="w-4 h-4" />
-                </button>
-             </div>
-           ))}
+          {pillars.map((p, i) => (
+            <div key={i} className="bg-white/[0.02] border border-white/5 p-8 rounded-3xl flex flex-col h-full hover:bg-white/[0.04] transition-colors group">
+              <div className="text-4xl font-black text-white/5 mb-4 group-hover:text-orange-500/10 transition-colors">0{i + 1}</div>
+              <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-8">{p.desc}</p>
+              <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-orange-500 hover:text-orange-400 transition-colors w-fit">
+                Read more <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ─── TIERED AD TYPES ─── */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-32 mb-32">
-        
+
         {/* SPONSORED PRODUCTS */}
         <section className="scroll-fade-up">
-           <div className="mb-12 border-b border-white/10 pb-12">
-             <span className="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6 inline-block">Core Strategy</span>
-             <h2 className="text-3xl md:text-5xl font-bold mb-6">Sponsored <span className="text-blue-400">Products</span></h2>
-             <p className="text-gray-400 text-lg max-w-2xl">Drive immediate visibility and sales. We optimize your Sponsored Product campaigns for maximum efficiency using granular structures to control spend and target specific search intents.</p>
-           </div>
-           
-           <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-             {[
-               { title: 'Keyword Targeting', icon: Target, desc: 'We target both broad and long-tail keywords to cast a wide net and capture low-hanging fruit.' },
-               { title: 'Product Targeting', icon: ShoppingBag, desc: 'We defensively target your own ASINs and offensively target competitors to steal market share.' },
-               { title: 'Auto Campaigns', icon: Zap, desc: 'We run auto campaigns with varying bids across different targeting groups to harvest new keywords.' },
-               { title: 'Category Targeting', icon: Database, desc: 'We target specific categories with refined price and rating parameters to increase conversions.' },
-               { title: 'Dayparting', icon: TrendingUp, desc: 'We adjust bids based on the time of day and day of the week when your customers are most active.' },
-               { title: 'Placement Multipliers', icon: MousePointer2, desc: 'We utilize placement modifiers to ensure your ads appear where they perform best.' },
-             ].map(t => (
-               <div key={t.title} className="flex gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-colors">
-                  <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0 text-blue-400">
-                    <t.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white mb-2">{t.title}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">{t.desc}</p>
-                  </div>
-               </div>
-             ))}
-           </div>
+          <div className="mb-12 border-b border-white/10 pb-12">
+            <span className="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6 inline-block">Core Strategy</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Sponsored <span className="text-blue-400">Products</span></h2>
+            <p className="text-gray-400 text-lg max-w-2xl">Drive immediate visibility and sales. We optimize your Sponsored Product campaigns for maximum efficiency using granular structures to control spend and target specific search intents.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
+            {[
+              { title: 'Keyword Targeting', icon: Target, desc: 'We target both broad and long-tail keywords to cast a wide net and capture low-hanging fruit.' },
+              { title: 'Product Targeting', icon: ShoppingBag, desc: 'We defensively target your own ASINs and offensively target competitors to steal market share.' },
+              { title: 'Auto Campaigns', icon: Zap, desc: 'We run auto campaigns with varying bids across different targeting groups to harvest new keywords.' },
+              { title: 'Category Targeting', icon: Database, desc: 'We target specific categories with refined price and rating parameters to increase conversions.' },
+              { title: 'Dayparting', icon: TrendingUp, desc: 'We adjust bids based on the time of day and day of the week when your customers are most active.' },
+              { title: 'Placement Multipliers', icon: MousePointer2, desc: 'We utilize placement modifiers to ensure your ads appear where they perform best.' },
+            ].map(t => (
+              <div key={t.title} className="flex gap-4 p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-colors">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center flex-shrink-0 text-blue-400">
+                  <t.icon className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-2">{t.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* SPONSORED BRANDS */}
         <section className="scroll-fade-up grid lg:grid-cols-2 gap-16 items-center bg-[#0E121E] p-8 md:p-12 rounded-3xl border border-white/5">
-           <div className="flex flex-col gap-6">
-             <span className="bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full w-fit">Brand Building</span>
-             <h2 className="text-3xl md:text-5xl font-bold text-white">Sponsored <span className="text-yellow-500">Brands</span></h2>
-             <p className="text-gray-400 text-lg">Elevate brand awareness and drive multi-item purchases. We craft compelling Sponsored Brand campaigns that showcase your product portfolio and tell your brand story.</p>
-             <ul className="flex flex-col gap-4 mt-4">
-                {['Custom headlines and logos that highlight your unique value prop.', 'High-converting video ads for massive scroll-stopping engagement.', 'Store spotlight campaigns that drive traffic to your custom storefront.'].map((b, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300 text-sm leading-relaxed">{b}</span>
-                  </li>
-                ))}
-             </ul>
-           </div>
-           
-           <div className="bg-[#1A202E] rounded-2xl border border-white/10 p-6 flex flex-col gap-4 shadow-xl">
-              <div className="flex items-center gap-3 border-b border-white/5 pb-4">
-                 <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-500"><ImageIcon className="w-5 h-5" /></div>
-                 <div>
-                   <h4 className="text-white font-bold text-sm">Your Premium Brand</h4>
-                   <p className="text-gray-500 text-[10px] uppercase">Sponsored</p>
-                 </div>
+          <div className="flex flex-col gap-6">
+            <span className="bg-yellow-500/10 text-yellow-500 border border-yellow-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full w-fit">Brand Building</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white">Sponsored <span className="text-yellow-500">Brands</span></h2>
+            <p className="text-gray-400 text-lg">Elevate brand awareness and drive multi-item purchases. We craft compelling Sponsored Brand campaigns that showcase your product portfolio and tell your brand story.</p>
+            <ul className="flex flex-col gap-4 mt-4">
+              {['Custom headlines and logos that highlight your unique value prop.', 'High-converting video ads for massive scroll-stopping engagement.', 'Store spotlight campaigns that drive traffic to your custom storefront.'].map((b, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300 text-sm leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-[#1A202E] rounded-2xl border border-white/10 p-6 flex flex-col gap-4 shadow-xl">
+            <div className="flex items-center gap-3 border-b border-white/5 pb-4">
+              <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-gray-500"><ImageIcon className="w-5 h-5" /></div>
+              <div>
+                <h4 className="text-white font-bold text-sm">Your Premium Brand</h4>
+                <p className="text-gray-500 text-[10px] uppercase">Sponsored</p>
               </div>
-              <p className="text-lg font-bold text-white px-2">Discover the standard of quality.</p>
-              <div className="grid grid-cols-3 gap-3">
-                 {[1,2,3].map(i => (
-                   <div key={i} className="bg-white/5 aspect-square rounded-xl flex items-center justify-center">
-                     <ImageIcon className="text-gray-600 w-6 h-6" />
-                   </div>
-                 ))}
-              </div>
-           </div>
+            </div>
+            <p className="text-lg font-bold text-white px-2">Discover the standard of quality.</p>
+            <div className="grid grid-cols-3 gap-3">
+              {[1, 2, 3].map(i => (
+                <div key={i} className="bg-white/5 aspect-square rounded-xl flex items-center justify-center">
+                  <ImageIcon className="text-gray-600 w-6 h-6" />
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* TESTIMONIALS (Optional inner block) */}
         <section className="scroll-fade-up grid md:grid-cols-2 gap-8">
-           {[
-             { name: "John D.", brand: "Fitness Gear Pro", quote: "Our ACoS dropped by 18% in the first two months, while our overall sales increased. The dashboard transparency is incredible." },
-             { name: "Sarah M.", brand: "Organic Home", quote: "They completely revamped our Sponsored Brands strategy. The new video ads are converting at 3x the rate of our old statics." }
-           ].map((t, i) => (
-             <div key={i} className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl flex flex-col gap-4 relative">
-                <div className="text-6xl font-serif text-orange-500/20 absolute top-4 left-6">"</div>
-                <div className="flex gap-1 mb-2 z-10">
-                  <Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" />
+          {[
+            { name: "John D.", brand: "Fitness Gear Pro", quote: "Our ACoS dropped by 18% in the first two months, while our overall sales increased. The dashboard transparency is incredible." },
+            { name: "Sarah M.", brand: "Organic Home", quote: "They completely revamped our Sponsored Brands strategy. The new video ads are converting at 3x the rate of our old statics." }
+          ].map((t, i) => (
+            <div key={i} className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl flex flex-col gap-4 relative">
+              <div className="text-6xl font-serif text-orange-500/20 absolute top-4 left-6">"</div>
+              <div className="flex gap-1 mb-2 z-10">
+                <Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" /><Star className="w-4 h-4 fill-orange-400 text-orange-400" />
+              </div>
+              <p className="text-gray-300 italic text-lg z-10 relative">"{t.quote}"</p>
+              <div className="mt-auto pt-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/10" />
+                <div>
+                  <h5 className="text-white font-bold text-sm">{t.name}</h5>
+                  <span className="text-xs text-orange-400">{t.brand}</span>
                 </div>
-                <p className="text-gray-300 italic text-lg z-10 relative">"{t.quote}"</p>
-                <div className="mt-auto pt-6 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/10" />
-                  <div>
-                    <h5 className="text-white font-bold text-sm">{t.name}</h5>
-                    <span className="text-xs text-orange-400">{t.brand}</span>
-                  </div>
-                </div>
-             </div>
-           ))}
+              </div>
+            </div>
+          ))}
         </section>
 
         {/* SPONSORED DISPLAY */}
         <section className="scroll-fade-up grid lg:grid-cols-2 gap-16 items-center bg-[#0E121E] p-8 md:p-12 rounded-3xl border border-white/5">
-           <div className="lg:order-2 flex flex-col gap-6">
-             <span className="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full w-fit">Retargeting</span>
-             <h2 className="text-3xl md:text-5xl font-bold text-white">Sponsored <span className="text-purple-400">Display</span></h2>
-             <p className="text-gray-400 text-lg">Retarget shoppers who viewed your products but didn't buy. We utilize Sponsored Display to re-engage high-intent shoppers on and off Amazon.</p>
-             <ul className="flex flex-col gap-4 mt-4">
-                {['Product remarketing to close hesitant buyers.', 'Audience targeting to reach specific demographics and interests.', 'Cross-selling and upselling on your own and competitor ASINs.'].map((b, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300 text-sm leading-relaxed">{b}</span>
-                  </li>
-                ))}
-             </ul>
-           </div>
-           
-           <div className="lg:order-1 relative aspect-video bg-[#1A202E] rounded-2xl border border-white/10 p-2 shadow-2xl overflow-hidden flex items-center justify-center group">
-              {/* TV Mockup style */}
-              <div className="absolute inset-0 border-4 border-[#080a10] rounded-2xl m-2 pointer-events-none z-20" />
-              <div className="w-full h-full bg-black/50 absolute z-10 group-hover:bg-black/20 transition-colors" />
-              <ImageIcon className="w-16 h-16 text-gray-700 z-0" />
-              {/* Floating ad overlay */}
-              <div className="absolute bottom-6 right-6 z-30 bg-white rounded-lg p-2 flex items-center gap-3 shadow-2xl animate-pulse">
-                <div className="w-10 h-10 bg-gray-200 rounded-md" />
-                <div className="flex flex-col">
-                  <span className="text-black text-[10px] font-bold">Buy Now on Amazon</span>
-                  <span className="text-orange-500 text-xs font-black">★★★★★</span>
-                </div>
+          <div className="lg:order-2 flex flex-col gap-6">
+            <span className="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full w-fit">Retargeting</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white">Sponsored <span className="text-purple-400">Display</span></h2>
+            <p className="text-gray-400 text-lg">Retarget shoppers who viewed your products but didn't buy. We utilize Sponsored Display to re-engage high-intent shoppers on and off Amazon.</p>
+            <ul className="flex flex-col gap-4 mt-4">
+              {['Product remarketing to close hesitant buyers.', 'Audience targeting to reach specific demographics and interests.', 'Cross-selling and upselling on your own and competitor ASINs.'].map((b, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300 text-sm leading-relaxed">{b}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:order-1 relative aspect-video bg-[#1A202E] rounded-2xl border border-white/10 p-2 shadow-2xl overflow-hidden flex items-center justify-center group">
+            {/* TV Mockup style */}
+            <div className="absolute inset-0 border-4 border-[#080a10] rounded-2xl m-2 pointer-events-none z-20" />
+            <div className="w-full h-full bg-black/50 absolute z-10 group-hover:bg-black/20 transition-colors" />
+            <ImageIcon className="w-16 h-16 text-gray-700 z-0" />
+            {/* Floating ad overlay */}
+            <div className="absolute bottom-6 right-6 z-30 bg-white rounded-lg p-2 flex items-center gap-3 shadow-2xl animate-pulse">
+              <div className="w-10 h-10 bg-gray-200 rounded-md" />
+              <div className="flex flex-col">
+                <span className="text-black text-[10px] font-bold">Buy Now on Amazon</span>
+                <span className="text-orange-500 text-xs font-black">★★★★★</span>
               </div>
-           </div>
+            </div>
+          </div>
         </section>
 
       </div>
@@ -444,10 +441,10 @@ const PpcManagement = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Skyrocket</span> your sales
           </h2>
           <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-             Stop leaving money on the table. Let our expert team optimize your Amazon advertising and drive unprecedented growth.
+            Stop leaving money on the table. Let our expert team optimize your Amazon advertising and drive unprecedented growth.
           </p>
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-12 py-5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/30 text-lg">
-             Book Your Free Strategy Call
+            Book Your Free Strategy Call
           </button>
         </div>
       </section>
@@ -457,11 +454,11 @@ const PpcManagement = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked <span className="text-orange-500">Questions</span></h2>
         <div className="flex flex-col gap-4">
           {faqs.map((faq, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === index ? 'bg-white/[0.05] border-orange-500/30' : 'bg-white/[0.02] hover:bg-white/[0.04]'}`}
             >
-              <button 
+              <button
                 className="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-white outline-none"
                 onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
               >
