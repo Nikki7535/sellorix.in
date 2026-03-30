@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ppc1 from '../assets/ppc_service_1st.webp';
-import ppcAds from '../assets/ppc_service_1st.webp';
+import ppcAds from '../assets/ppc_service_2nd.webp';
 import {
   ArrowRight, Target, DollarSign, Search, Database, FlaskConical, BarChart3,
   Rocket, TrendingUp, CheckCircle2, Image as ImageIcon, Video, ShoppingBag, Eye,
