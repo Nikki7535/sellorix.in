@@ -49,7 +49,7 @@ const Clients = () => {
     <section id="clients" ref={containerRef} className="py-20 bg-dark-bg overflow-hidden relative border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
         <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 font-medium mb-4">
-          Trusted by industries world-wide
+          Trusted by major brands and Amazon FBA sellers
         </h2>
       </div>
 
@@ -66,8 +66,7 @@ const Clients = () => {
           {[...logos, ...logos].map((logo, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-32 md:w-44 h-16 flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
-            >
+              className="flex-shrink-0 w-32 md:w-44 h-16 flex items-center justify-center">
               <img
                 src={logo}
                 alt={`Client Logo ${idx + 1}`}

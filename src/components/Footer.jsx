@@ -13,10 +13,10 @@ const Footer = () => {
             <span>Sellorix</span>
           </div>
           <p className="text-gray-400 max-w-sm">
-            Elevating businesses to the next dimension through strategic consultancy and digital innovation.
+            Scaling brands with precision through data-driven strategy and e-commerce mastery.
           </p>
         </div>
-        
+
         <div className="flex gap-16">
           <div className="flex flex-col gap-4 text-sm">
             <h5 className="font-semibold text-white tracking-wide uppercase text-xs mb-1">Services</h5>
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
         <p>&copy; {new Date().getFullYear()} Sellorix Consultancy. All rights reserved.</p>
         <div className="flex gap-6">

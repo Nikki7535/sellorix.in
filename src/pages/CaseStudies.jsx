@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import { ArrowRightCircle, ArrowUpRight, TrendingUp, BarChart3, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
-import amazonHero from '../assets/amazon_growth_hero_dark.png';
+import amazonHero from '../assets/lady_wala.png';
 
 const CaseStudies = () => {
   useEffect(() => {
     const tl = gsap.timeline();
-    
-    tl.fromTo('.hero-text-content > *', 
-      { opacity: 0, y: 30 }, 
+
+    tl.fromTo('.hero-text-content > *',
+      { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power3.out" }
     );
-    
-    tl.fromTo('.hero-image-container', 
-      { opacity: 0, x: 50 }, 
+
+    tl.fromTo('.hero-image-container',
+      { opacity: 0, x: 50 },
       { opacity: 1, x: 0, duration: 1, ease: "power3.out" },
       "-=0.6"
     );
 
-    tl.fromTo('.trust-bar > div', 
-      { opacity: 0, y: 20 }, 
+    tl.fromTo('.trust-bar > div',
+      { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.2, ease: "power2.out" },
       "-=0.4"
     );
@@ -35,13 +35,13 @@ const CaseStudies = () => {
 
         <div className="w-full md:w-1/2 hero-text-content z-10">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Transformative <br />
+            Profit First <br />
             <span className="heading-gradient">Amazon Growth</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-lg leading-relaxed">
-            We work hand in hand with brands to create tailor-made strategies that help drive growth and hit new heights on Amazon.
+            Amazon is complex. We simplify the process with tailor-made strategies designed to optimize your listings, manage your spend, and hit your revenue targets.
           </p>
-          
+
           <div className="flex flex-col gap-4">
             <a href="#" className="flex items-center gap-3 text-white font-semibold group hover:text-primary-400 transition-colors">
               <ArrowRightCircle className="w-6 h-6 text-primary-500 fill-primary-500/10 group-hover:scale-110 transition-transform" />
@@ -57,9 +57,9 @@ const CaseStudies = () => {
         {/* Hero Visual Area */}
         <div className="w-full md:w-1/2 relative hero-image-container">
           <div className="relative z-0 scale-110">
-            <img 
-              src={amazonHero} 
-              alt="Amazon Growth Graph" 
+            <img
+              src={amazonHero}
+              alt="Amazon Growth Graph"
               className="w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(249,91,7,0.2)]"
             />
           </div>
@@ -77,7 +77,7 @@ const CaseStudies = () => {
 
           <div className="absolute top-1/4 right-[5%] bg-gray-900/80 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-gray-800 animate-float">
             <p className="text-xs text-gray-500 font-bold mb-1">Sales</p>
-            <p className="text-2xl font-bold text-white">$172,208.98</p>
+            <p className="text-2xl font-bold text-white">$137,2080.98</p>
             <div className="mt-1 flex items-center gap-1 text-green-400 text-[10px] font-bold">
               <TrendingUp className="w-3 h-3" />
               +24% vs last mo
@@ -86,65 +86,16 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Trust Bar Section */}
-      <section className="border-y border-gray-800/50 py-12 bg-dark-surface/30 trust-bar">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-10">
-          
-          {/* Inc 5000 Badge Style */}
-          <div className="flex items-center gap-6 group">
-            <div className="flex flex-col items-center">
-              <div className="flex gap-1 mb-1">
-                <div className="w-3 h-1 bg-primary-500 rounded-full"></div>
-                <div className="w-3 h-1 bg-yellow-400 rounded-full"></div>
-                <div className="w-3 h-1 bg-blue-500 rounded-full"></div>
-              </div>
-              <p className="text-4xl font-black text-white tracking-tighter">334<sup className="text-lg text-primary-500">TH</sup></p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-1">IN USA</p>
-            </div>
-            <div className="h-16 w-[1px] bg-gray-800 hidden md:block"></div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-1">Client growth = company growth</h3>
-              <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-                We are honored to be recognized by Inc.com as one of the fastest growing companies in the USA.
-              </p>
-            </div>
-          </div>
 
-          <div className="h-[1px] w-full md:w-[1px] md:h-16 bg-gray-800"></div>
-
-          {/* Testimonial Preview Style */}
-          <div className="flex items-center gap-6 group">
-            <div className="relative">
-              <div className="w-16 h-16 rounded-xl overflow-hidden shadow-lg border border-gray-800 transform group-hover:rotate-3 transition-transform">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop" 
-                  alt="Client" 
-                  className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
-                />
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-primary-600 text-white p-1.5 rounded-lg shadow-lg">
-                <ArrowUpRight className="w-4 h-4" />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-1">Get insights from our clients</h3>
-              <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
-                Get an inside look at what our clients have to say about their experience working with us.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { label: 'Managed Spend', value: '$50M+', icon: BarChart3 },
-              { label: 'Revenue Generated', value: '$250M+', icon: TrendingUp },
-              { label: 'Active Brands', value: '120+', icon: ShieldCheck },
+              { label: 'Managed Spend', value: '$3M+', icon: BarChart3 },
+              { label: 'Revenue Generated', value: '$10M+', icon: TrendingUp },
+              { label: 'Active Brands', value: '40+', icon: ShieldCheck },
               { label: 'Success Rate', value: '98%', icon: ArrowUpRight },
             ].map((stat, idx) => (
               <div key={idx} className="p-8 rounded-3xl bg-dark-surface/50 hover:bg-dark-surface hover:shadow-2xl hover:shadow-primary-500/5 transition-all border border-gray-800/50 group">
@@ -235,14 +186,14 @@ const CaseStudies = () => {
                     <span className="text-3xl font-black text-white">{item.growth}</span>
                   </div>
                   <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">{item.label}</p>
-                  
+
                   <div className="border-t border-gray-800 pt-6 mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{item.brand}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed min-h-[60px]">
                       {item.desc}
                     </p>
                   </div>
-                  
+
                   <a href="#" className="inline-flex items-center gap-2 text-primary-500 font-bold hover:text-primary-400 transition-colors uppercase tracking-wider text-xs">
                     <ArrowRightCircle className="w-5 h-5" />
                     Read case study

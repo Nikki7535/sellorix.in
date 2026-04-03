@@ -5,6 +5,7 @@ import {
   Users, ClipboardCheck, ShieldAlert, BookOpen, Clock, 
   Lock, Tag, FileCheck, CheckCircle2, XCircle, ArrowRight
 } from 'lucide-react';
+import sopImg from '../assets/sop.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,23 +110,18 @@ const Sops = () => {
             </p>
          </div>
 
-         {/* 4 Product Cards */}
-         <div className="grid md:grid-cols-2 gap-6 anim-up">
-            {productCards.map((card, i) => (
-               <div key={i} className="bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden flex flex-col sm:flex-row items-center hover:bg-white/[0.04] transition-all group cursor-pointer">
-                  <div className="w-full sm:w-48 h-48 sm:h-full shrink-0 relative overflow-hidden bg-gray-900 border-b sm:border-b-0 sm:border-r border-white/10">
-                     <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/20 to-transparent z-10 group-hover:opacity-100 opacity-50 transition-opacity" />
-                     <img src={card.img} alt={card.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 mix-blend-screen" />
-                  </div>
-                  <div className="p-8 flex flex-col justify-center gap-3">
-                     <h3 className="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors leading-tight">{card.title}</h3>
-                     <p className="text-sm text-gray-400 leading-relaxed mb-2">{card.desc}</p>
-                     <span className="text-xs font-bold text-yellow-500 flex items-center gap-1 uppercase tracking-widest mt-auto">
-                        Learn more <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                     </span>
-                  </div>
-               </div>
-            ))}
+         {/* SOP Full Width Image Section */}
+         <div className="anim-up relative group">
+            <div className="absolute inset-0 bg-yellow-500/5 blur-[100px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <div className="relative bg-white/[0.03] border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:border-yellow-500/30">
+               <img 
+                 src={sopImg} 
+                 alt="Amazon Brand Management SOPs" 
+                 className="w-full h-auto object-cover transition-transform duration-1000 hover:scale-[1.02]" 
+               />
+               {/* Glossy overlay */}
+               <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent pointer-events-none" />
+            </div>
          </div>
       </section>
 

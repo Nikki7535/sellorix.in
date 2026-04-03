@@ -8,42 +8,71 @@ gsap.registerPlugin(ScrollTrigger);
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Cox',
+    name: 'Mark C.',
     role: 'CEO',
     company: 'Nisolo',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800',
-    quote: 'We love working with you guys',
-    desc: 'The progress we have gained on Amazon has been incredible. Their team is truly part of our growth story.',
+    image: '../src/assets/Mark C.jpeg',
+    quote: 'US Private Label Seller',
+    desc: 'Amit transformed our Amazon PPC campaigns in 2 weeks. Ad spend down 30%, sales up 50% in weeks. Data-driven pr0, highly recommend!',
     companyLogo: 'Nisolo'
   },
   {
     id: 2,
-    name: 'Mark Pettyjohn',
+    name: 'JameSR',
     role: 'Founder',
     company: 'Chinook Seedery',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800',
-    quote: 'Tremendous growth',
-    desc: 'Achieving considerable growth on Amazon seemed impossible until we partnered with Sellorix. Best decision yet.',
+    image: '../src/assets/JameSR.jpeg',
+    quote: ' UK Brand Owner',
+    desc: 'Full account management magic! Amit handled everything from audits to scaling. Our revenue doubled without the headaches. Trustworthy partner.',
     companyLogo: 'Chinook Seedery'
   },
   {
     id: 3,
-    name: 'Rustu',
+    name: 'Noah Davis',
     role: 'Managing Director',
     company: 'MAG',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800',
-    quote: '4 years with the best',
-    desc: "We've been with them for over 4 years, and we're proud to see how much we've been able to scale our performance.",
+    image: '../src/assets/Noah Davis.jpeg',
+    quote: 'US E-com Startup',
+    desc: "Inventory planning saved us from stockouts and overstock disasters Amit's forecasts are spot-on, keeping cash flow smooth.",
+    companyLogo: 'MAG'
+  },
+  {
+    id: 4,
+    name: 'Olivia Roy',
+    role: 'Founder',
+    company: 'MAG',
+    image: '../src/assets/Olivia Roy.jpeg',
+    quote: 'UK Based Seller',
+    desc: "Amit fixed our high-spend PPC mess sales rose 60% with lower costs. Honest, results-focused pro we trust.",
+    companyLogo: 'MAG'
+  },
+  {
+    id: 5,
+    name: 'Daniel Harris',
+    role: 'CEO',
+    company: 'MAG',
+    image: '../src/assets/Daniel Harris.webp',
+    quote: 'Australia Supplement Brand Owner',
+    desc: "Listing optimization + A+ content boosted conversions 40%. Our pages now convert like crazy, professional, fast results every time.",
+    companyLogo: 'MAG'
+  },
+  {
+    id: 6,
+    name: 'James Thomas',
+    role: 'CEO',
+    company: 'MAG',
+    image: '../src/assets/James Thomas.avif',
+    quote: 'Canada Private seller',
+    desc: "CRO expertise turned our low-traffic listings into winners. Click-throughs and buys skyrocketed. Honest advice, no fluff.",
     companyLogo: 'MAG'
   }
 ];
 
 const stats = [
-  { label: 'Brands currently managed', value: '450+', icon: <Building2 className="w-6 h-6" /> },
-  { label: 'Revenue generated on Amazon annually', value: '$1.2+ Billion', icon: <TrendingUp className="w-6 h-6" /> },
-  { label: 'Success driven employees', value: '460+', icon: <Users className="w-6 h-6" /> }
+  { label: 'Brands currently managed', value: '40+', icon: <Building2 className="w-6 h-6" /> },
+  { label: 'Revenue generated on Amazon annually', value: '$10M+', icon: <TrendingUp className="w-6 h-6" /> },
+  { label: 'Total Ads Spend', value: '3M+', icon: <Users className="w-6 h-6" /> }
 ];
-
 const Testimonials = () => {
   const sectionRef = useRef(null);
 
@@ -152,9 +181,9 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <div key={t.id} className="testimonial-card flex flex-col h-full bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all group">
               <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <img 
-                  src={t.image} 
-                  alt={t.name} 
+                <img
+                  src={t.image}
+                  alt={t.name}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all" />
@@ -164,7 +193,7 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-8 flex-grow flex flex-col">
                 <div className="mb-4">
                   <Quote className="w-8 h-8 text-primary-500 fill-primary-500/20 mb-4" />
@@ -173,7 +202,7 @@ const Testimonials = () => {
                     {t.desc}
                   </p>
                 </div>
-                
+
                 <div className="mt-auto pt-6 border-t border-white/5">
                   <p className="font-bold text-white">{t.name}</p>
                   <p className="text-sm text-primary-500">{t.role} from <span className="underline decoration-primary-500/30">{t.company}</span></p>
@@ -186,8 +215,8 @@ const Testimonials = () => {
 
       {/* Results Banner */}
       <div className="stats-banner relative py-20 px-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-primary-600 origin-bottom scale-y-100" />
-        
+        <div className="absolute inset-0 bg-[#000] origin-bottom scale-y-100" />
+
         {/* Curved Divider effect */}
         <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[20px] border-dark-bg" />
 
@@ -212,9 +241,9 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
-        
+
         {/* Pointed down arrow effect */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-primary-600" />
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-black" />
       </div>
     </section>
   );

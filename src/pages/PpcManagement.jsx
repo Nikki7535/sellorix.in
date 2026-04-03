@@ -45,11 +45,11 @@ const pillars = [
 ];
 
 const faqs = [
-  { q: "What is your Amazon PPC management philosophy?", a: "We believe in a data-driven, holistic approach. We don't just set up campaigns and walk away; we actively manage bids, harvest keywords, and align your PPC strategy with SEO and inventory." },
-  { q: "How long does it take to see results from Amazon PPC?", a: "While you can see increased traffic immediately, it typically takes 30-90 days of continuous optimization and data gathering to mature campaigns and see a significant improvement in profitability." },
-  { q: "Do you guarantee a specific ACoS or RoAS?", a: "We guarantee relentless optimization toward your goals. Due to market volatility and competition, no agency can ethically guarantee a specific ACoS, but our track record shows consistent, significant improvements." },
-  { q: "What's included in your monthly PPC management?", a: "Our service includes campaign setup, daily bid/budget management, search term harvesting, negative keyword optimization, A/B testing, and weekly performance reporting." },
-  { q: "Can you manage my existing campaigns, or do you start over?", a: "We evaluate your current structure first. If it's salvageable and holds valuable historical data, we optimize it. If the structure is flawed, we will construct a new, optimized foundation alongside it." }
+  { q: "Why choose you over a large, well-known agency?", a: "You get direct access to a specialist with 4+ years of hands-on experience, not a junior account manager. This means faster communication and a strategy tailored specifically to your brand’s unique goals." },
+  { q: "How do you ensure my profit margins don't disappear into ad spend?", a: "We prioritize your profit over vanity metrics like ROAS or ACOS. Our goal is to grow your organic ranking so your business becomes more profitable and less dependent on paid ads." },
+  { q: "Why should I trust you with my brand's presence in the USA/UK/EU/Canada/Australia/Mexico/India markets?", a: "We have managed brands across these specific global marketplaces and understand the local search nuances. We ensure your listings and ads feel native to attract the right customers in those regions." },
+  { q: "Why is your reporting better than what I’m currently getting?", a: "I provide transparent, granular data using tools like Helium 10/Jungle Scout and Customized Excel sheet so you see exactly where every dollar goes. You’ll always know which keywords are driving profit and which ones we are cutting to save costs." },
+  { q: "How do you handle my listing before spending my ad budget?", a: "We audit your images, A+ Content, and backend SEO before scaling your PPC campaigns. This ensures your traffic actually converts into sales rather than wasting your budget on low-converting listings." }
 ];
 
 
@@ -438,7 +438,7 @@ const PpcManagement = () => {
       <section className="bg-gradient-to-t from-orange-500/10 to-transparent py-24 border-t border-orange-500/20 scroll-fade-up">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Skyrocket</span> your sales
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-500">Stop Wasting </span> Your Ad Spend!
           </h2>
           <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
             Stop leaving money on the table. Let our expert team optimize your Amazon advertising and drive unprecedented growth.

@@ -89,7 +89,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero-left-child text-gray-400 text-lg leading-relaxed max-w-lg">
-            We help amazon sellers increase their profits and scale your business with 10X faster.
+            Your In-House Amazon PPC Partner by replacing traditional agencies with deep-dive growth strategy.
           </p>
 
           <div className="hero-left-child flex flex-col sm:flex-row gap-4">
