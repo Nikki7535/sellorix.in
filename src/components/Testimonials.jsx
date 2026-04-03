@@ -3,6 +3,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Star, Quote, Play, Building2, Users, TrendingUp } from 'lucide-react';
 
+// Import testimonial images
+import markImg from '../assets/Mark C.jpeg';
+import jamesrImg from '../assets/JameSR.jpeg';
+import noahImg from '../assets/Noah Davis.jpeg';
+import oliviaImg from '../assets/Olivia Roy.jpeg';
+import danielImg from '../assets/Daniel Harris.webp';
+import jamesThomasImg from '../assets/James Thomas.avif';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
@@ -11,7 +19,7 @@ const testimonials = [
     name: 'Mark C.',
     role: 'CEO',
     company: 'Nisolo',
-    image: '../src/assets/Mark C.jpeg',
+    image: markImg,
     quote: 'US Private Label Seller',
     desc: 'Amit transformed our Amazon PPC campaigns in 2 weeks. Ad spend down 30%, sales up 50% in weeks. Data-driven pr0, highly recommend!',
     companyLogo: 'Nisolo'
@@ -21,7 +29,7 @@ const testimonials = [
     name: 'JameSR',
     role: 'Founder',
     company: 'Chinook Seedery',
-    image: '../src/assets/JameSR.jpeg',
+    image: jamesrImg,
     quote: ' UK Brand Owner',
     desc: 'Full account management magic! Amit handled everything from audits to scaling. Our revenue doubled without the headaches. Trustworthy partner.',
     companyLogo: 'Chinook Seedery'
@@ -31,7 +39,7 @@ const testimonials = [
     name: 'Noah Davis',
     role: 'Managing Director',
     company: 'MAG',
-    image: '../src/assets/Noah Davis.jpeg',
+    image: noahImg,
     quote: 'US E-com Startup',
     desc: "Inventory planning saved us from stockouts and overstock disasters Amit's forecasts are spot-on, keeping cash flow smooth.",
     companyLogo: 'MAG'
@@ -41,7 +49,7 @@ const testimonials = [
     name: 'Olivia Roy',
     role: 'Founder',
     company: 'MAG',
-    image: '../src/assets/Olivia Roy.jpeg',
+    image: oliviaImg,
     quote: 'UK Based Seller',
     desc: "Amit fixed our high-spend PPC mess sales rose 60% with lower costs. Honest, results-focused pro we trust.",
     companyLogo: 'MAG'
@@ -51,7 +59,7 @@ const testimonials = [
     name: 'Daniel Harris',
     role: 'CEO',
     company: 'MAG',
-    image: '../src/assets/Daniel Harris.webp',
+    image: danielImg,
     quote: 'Australia Supplement Brand Owner',
     desc: "Listing optimization + A+ content boosted conversions 40%. Our pages now convert like crazy, professional, fast results every time.",
     companyLogo: 'MAG'
@@ -61,7 +69,7 @@ const testimonials = [
     name: 'James Thomas',
     role: 'CEO',
     company: 'MAG',
-    image: '../src/assets/James Thomas.avif',
+    image: jamesThomasImg,
     quote: 'Canada Private seller',
     desc: "CRO expertise turned our low-traffic listings into winners. Click-throughs and buys skyrocketed. Honest advice, no fluff.",
     companyLogo: 'MAG'
