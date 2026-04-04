@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ArrowRight, Sparkles, TrendingUp, Users, Star } from 'lucide-react'
 
@@ -77,7 +78,7 @@ const Hero = () => {
 
           <div className="hero-left-child inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/25 text-indigo-300 text-sm font-medium backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
-            Trusted by 200+ Companies
+            Trusted by 40+ Brands
           </div>
 
           <h1 className="hero-left-child text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white">
@@ -93,12 +94,12 @@ const Hero = () => {
           </p>
 
           <div className="hero-left-child flex flex-col sm:flex-row gap-4">
-            <button className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-500/30">
-              Start Free Consultation <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-105">
+            <Link to="/services/amazon-audit" className="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-500/30">
+              Start Your Free Brand Audit <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link to="/case-studies" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-full transition-all hover:scale-105">
               View Case Studies
-            </button>
+            </Link>
           </div>
 
           {/* Social proof row */}
@@ -112,7 +113,7 @@ const Hero = () => {
               <div className="flex items-center gap-1 text-yellow-400">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-yellow-400" />)}
               </div>
-              <span className="text-gray-400 text-sm">Make 4.8/5 from 30+clients</span>
+              <span className="text-gray-400 text-sm"> 4.8/5 from 40+clients</span>
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@ const Hero = () => {
                 <Users className="w-5 h-5 text-purple-400" />
               </div>
               <div>
-                <p className="text-white font-bold text-lg">30+</p>
+                <p className="text-white font-bold text-lg">40+</p>
                 <p className="text-gray-400 text-xs">Global Clients</p>
               </div>
             </div>

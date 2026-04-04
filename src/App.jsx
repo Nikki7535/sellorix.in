@@ -19,6 +19,12 @@ import AmazonSeo from './pages/AmazonSeo';
 import AmazonAccountAudit from './pages/AmazonAccountAudit';
 import Sops from './pages/Sops';
 import CaseStudies from './pages/CaseStudies';
+import CaseStudyDetail from './pages/CaseStudyDetail';
+import StampHubCaseStudy from './pages/StampHubCaseStudy';
+import TentAndTableCaseStudy from './pages/TentAndTableCaseStudy';
+import HeavenlyHunksCaseStudy from './pages/HeavenlyHunksCaseStudy';
+import PillowflexCaseStudy from './pages/PillowflexCaseStudy';
+import ChinookSeederyCaseStudy from './pages/ChinookSeederyCaseStudy';
 import WhatsAppWidget from './components/WhatsAppWidget';
 
 gsap.registerPlugin(ScrollTrigger)
@@ -49,6 +55,12 @@ function App() {
         <Route path="/services/amazon-audit" element={<AmazonAccountAudit />} />
         <Route path="/services/sops" element={<Sops />} />
         <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-study/chirp" element={<CaseStudyDetail />} />
+        <Route path="/case-study/stamp-hub" element={<StampHubCaseStudy />} />
+        <Route path="/case-study/tent-and-table" element={<TentAndTableCaseStudy />} />
+        <Route path="/case-study/heavenly-hunks" element={<HeavenlyHunksCaseStudy />} />
+        <Route path="/case-study/pillowflex" element={<PillowflexCaseStudy />} />
+        <Route path="/case-study/chinook-seedery" element={<ChinookSeederyCaseStudy />} />
       </Routes>
       <Footer />
       <WhatsAppWidget />

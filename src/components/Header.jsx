@@ -33,7 +33,7 @@ const Header = ({ logoUrl = mainLogo }) => {
       {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
         <Link to="/" className="hover:text-indigo-400 transition-colors">Home</Link>
-        <Link to="/about" className="hover:text-indigo-400 transition-colors">About Us</Link>
+
 
         {/* Services Dropdown */}
         <div className="relative group">
@@ -55,6 +55,7 @@ const Header = ({ logoUrl = mainLogo }) => {
           </div>
         </div>
         <Link to="/case-studies" className="hover:text-indigo-400 transition-colors">Case Studies</Link>
+        <Link to="/about" className="hover:text-indigo-400 transition-colors">About Us</Link>
 
         <Link to="/contact" className="hover:text-indigo-400 transition-colors">Contact</Link>
       </nav>

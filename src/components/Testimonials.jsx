@@ -10,6 +10,7 @@ import noahImg from '../assets/Noah Davis.jpeg';
 import oliviaImg from '../assets/Olivia Roy.jpeg';
 import danielImg from '../assets/Daniel Harris.webp';
 import jamesThomasImg from '../assets/James Thomas.avif';
+import sophiaWilsonImg from '../assets/Sophia Wilson.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,17 +19,17 @@ const testimonials = [
     id: 1,
     name: 'Mark C.',
     role: 'CEO',
-    company: 'Nisolo',
+    company: 'Vicwe',
     image: markImg,
     quote: 'US Private Label Seller',
     desc: 'Amit transformed our Amazon PPC campaigns in 2 weeks. Ad spend down 30%, sales up 50% in weeks. Data-driven pr0, highly recommend!',
-    companyLogo: 'Nisolo'
+    companyLogo: 'Vicwe'
   },
   {
     id: 2,
-    name: 'JameSR',
+    name: 'James R',
     role: 'Founder',
-    company: 'Chinook Seedery',
+    company: 'Vetpro Complete',
     image: jamesrImg,
     quote: ' UK Brand Owner',
     desc: 'Full account management magic! Amit handled everything from audits to scaling. Our revenue doubled without the headaches. Trustworthy partner.',
@@ -38,7 +39,7 @@ const testimonials = [
     id: 3,
     name: 'Noah Davis',
     role: 'Managing Director',
-    company: 'MAG',
+    company: 'SEAMOON',
     image: noahImg,
     quote: 'US E-com Startup',
     desc: "Inventory planning saved us from stockouts and overstock disasters Amit's forecasts are spot-on, keeping cash flow smooth.",
@@ -48,7 +49,7 @@ const testimonials = [
     id: 4,
     name: 'Olivia Roy',
     role: 'Founder',
-    company: 'MAG',
+    company: 'CONTEMPA',
     image: oliviaImg,
     quote: 'UK Based Seller',
     desc: "Amit fixed our high-spend PPC mess sales rose 60% with lower costs. Honest, results-focused pro we trust.",
@@ -58,8 +59,8 @@ const testimonials = [
     id: 5,
     name: 'Daniel Harris',
     role: 'CEO',
-    company: 'MAG',
-    image: danielImg,
+    company: 'OCHEAL',
+    image: sophiaWilsonImg,
     quote: 'Australia Supplement Brand Owner',
     desc: "Listing optimization + A+ content boosted conversions 40%. Our pages now convert like crazy, professional, fast results every time.",
     companyLogo: 'MAG'
@@ -68,7 +69,7 @@ const testimonials = [
     id: 6,
     name: 'James Thomas',
     role: 'CEO',
-    company: 'MAG',
+    company: 'KARAMD',
     image: jamesThomasImg,
     quote: 'Canada Private seller',
     desc: "CRO expertise turned our low-traffic listings into winners. Click-throughs and buys skyrocketed. Honest advice, no fluff.",
@@ -78,7 +79,7 @@ const testimonials = [
 
 const stats = [
   { label: 'Brands currently managed', value: '40+', icon: <Building2 className="w-6 h-6" /> },
-  { label: 'Revenue generated on Amazon annually', value: '$10M+', icon: <TrendingUp className="w-6 h-6" /> },
+  { label: 'Revenue generated on Amazon', value: '$10M+', icon: <TrendingUp className="w-6 h-6" /> },
   { label: 'Total Ads Spend', value: '3M+', icon: <Users className="w-6 h-6" /> }
 ];
 const Testimonials = () => {
@@ -147,7 +148,7 @@ const Testimonials = () => {
   return (
     <section ref={sectionRef} className="py-24 bg-dark-bg relative overflow-hidden">
       {/* Trust Bar */}
-      <div className="max-w-7xl mx-auto px-6 mb-20">
+      {/* <div className="max-w-7xl mx-auto px-6 mb-20">
         <div className="trust-bar flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 border-b border-white/5 pb-12">
           <div className="trust-item flex flex-col items-center">
             <div className="flex items-center gap-2 mb-2">
@@ -181,7 +182,7 @@ const Testimonials = () => {
             <span className="text-sm text-gray-400">4.6 Stars | 133 Reviews</span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Testimonial Grid */}
       <div className="max-w-7xl mx-auto px-6 mb-32">
@@ -230,7 +231,7 @@ const Testimonials = () => {
 
         <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
           <div className="mb-12">
-            <h3 className="text-4xl md:text-5xl font-black mb-4 uppercase tracking-tighter">It's all about results</h3>
+            <h3 className="text-4xl md:text-5xl font-black mb-4 text-yellow-400">It's All About Results</h3>
             <p className="text-white/80 max-w-2xl mx-auto text-lg">
               Our success is directly tied to the growth and expansion of our amazing clients.
             </p>

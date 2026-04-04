@@ -77,7 +77,7 @@ const Services = () => {
         <div className="text-center mb-16 max-w-2xl mx-auto service-header">
           <h2 className="text-sm uppercase tracking-widest text-primary-400 font-semibold mb-3">Our Offerings</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">The strategies Amazon sellers don't discover  <span className="heading-gradient text-transparent bg-clip-text">until they've already wasted $50K.</span></h3>
-          <p className="text-gray-400 text-lg">We don't just "manage accounts." We fix the expensive mistakes that keep your products invisible, your ad spend wasted, and your competitors winning.</p>
+          <p className="text-gray-400 text-lg">We don't just <span className="text-primary-400 color-yellow">"manage accounts."</span> We fix the expensive mistakes that keep your products invisible, your ad spend wasted, and your competitors winning.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">

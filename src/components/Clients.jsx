@@ -8,7 +8,7 @@ import logo3 from '../assets/logo-3.webp'
 import logo4 from '../assets/logo-4.webp'
 import logo5 from '../assets/logo-5.webp'
 import logo6 from '../assets/logo-6.webp'
-import logo7 from '../assets/logo-7.webp'
+
 import logo8 from '../assets/logo-8.webp'
 import logo9 from '../assets/logo-9.webp'
 import logo10 from '../assets/logo-10.webp'
@@ -17,7 +17,7 @@ import logo12 from '../assets/logo-12.webp'
 
 const logos = [
   logo1, logo2, logo3, logo4, logo5, logo6,
-  logo7, logo8, logo9, logo10, logo11, logo12
+  logo8, logo9, logo10, logo11, logo12
 ]
 
 const Clients = () => {
@@ -48,7 +48,7 @@ const Clients = () => {
   return (
     <section id="clients" ref={containerRef} className="py-20 bg-dark-bg overflow-hidden relative border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-        <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 font-medium mb-4">
+        <h2 className="text-2xl uppercase tracking-[0.3em] text-gray-500 font-medium mb-4 text-yellow-400 ">
           Trusted by major brands and Amazon FBA sellers
         </h2>
       </div>

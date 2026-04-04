@@ -7,6 +7,8 @@ import p3 from '../assets/p3.png';
 import p4 from '../assets/p4.png';
 import newP1 from '../assets/new_P1.png';
 import newP2 from '../assets/new_p2.png';
+import mainlogo from '../assets/main_logo1.png';
+// import sophia from '../assets/Sophia Wilson.jpeg';
 import {
   ChevronLeft, ChevronRight, MapPin, Clock, Globe, ArrowRight,
   MousePointer2, Settings, Image as ImageIcon, Search, Megaphone,
@@ -74,9 +76,9 @@ const servicesData = [
     bullets: [
       'CTR-optimized main product images',
       'Premium A+ Content modules',
-      'Brand Store design & build',
+      'Brand Story, Store design & build',
       'Infographic & lifestyle imagery',
-      'Video & 360° content production',
+      'Video & Comparison Chart',
     ],
     stat: { value: '+40%', label: 'Avg. CTR Uplift' },
     visual: <DesignVisual />,
@@ -491,10 +493,11 @@ const FullServiceManagement = () => {
           </p>
           <div className="hero-text-item flex flex-col sm:flex-row gap-4">
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20">
-              Get a Free Audit
+              <a href="https://calendly.com/amitkushwaha/new-meeting">Get a Free Audit</a>
             </button>
             <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105">
-              See What's Included ↓
+              <a href="https://www.linkedin.com/in/amitkushwaha12">
+                Direct Connect With Founder ↓</a>
             </button>
           </div>
         </div>
@@ -505,10 +508,8 @@ const FullServiceManagement = () => {
             <div className="flex-1 bg-[#1A202E] p-6 md:p-8 flex flex-col">
               <div className="flex flex-col items-center mb-6">
                 <div className="w-12 h-12 bg-black rounded-full flex flex-col items-center justify-center p-2 mb-3 border border-white/10">
-                  <div className="flex gap-0.5 items-end mb-0.5">
-                    <div className="w-1.5 h-3 bg-red-400" /><div className="w-1.5 h-4 bg-yellow-400" /><div className="w-1.5 h-3 bg-orange-400" />
-                  </div>
-                  <span className="text-[9px] font-black text-white">SELLORIX</span>
+                  <img src={mainlogo} alt="logo" />
+
                 </div>
                 <h3 className="text-base font-semibold text-center leading-snug">Meet with Sellorix Founder</h3>
               </div>
@@ -546,15 +547,15 @@ const FullServiceManagement = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* ─── STATS ROW ─── */}
-      <section className="stats-section border-y border-white/5 bg-white/[0.015] py-14">
+      < section className="stats-section border-y border-white/5 bg-white/[0.015] py-14" >
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { val: '40+', label: 'Brands' },
-            { val: '4th+', label: 'Years Of Expertise' },
-            { val: '5+', label: 'In House Experts' },
+            { val: '4+', label: 'Years Of Expertise' },
+            { val: '3+', label: 'In House Experts' },
             { val: '100%', label: 'Amazon Focused' },
           ].map(s => (
             <div key={s.label} className="stat-card flex flex-col items-center text-center gap-1">
@@ -563,10 +564,10 @@ const FullServiceManagement = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section >
 
       {/* ─── ROADMAP ICON GRID ─── */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+      < section className="py-24 px-6 md:px-12 max-w-7xl mx-auto" >
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
             The Profit-First Roadmap to{' '}
@@ -635,90 +636,92 @@ const FullServiceManagement = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section >
 
       {/* ─── ALTERNATING SERVICE SECTIONS ─── */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-0">
-        {servicesData.map((service, index) => {
-          const isEven = index % 2 === 0;
-          return (
-            <section
-              key={service.id}
-              className="service-section py-20 border-t border-white/5 grid lg:grid-cols-2 gap-16 items-center"
-            >
-              {/* Content Side */}
-              <div className={`service-content flex flex-col gap-7 ${!isEven ? 'lg:order-2' : ''}`}>
-                {/* Icon + badge */}
-                <div className="flex items-center gap-4">
-                  <div className={`w-14 h-14 rounded-2xl ${service.bgClass} border ${service.borderClass} flex items-center justify-center flex-shrink-0`}>
-                    <service.icon className={`w-7 h-7 ${service.colorClass}`} />
+      < div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col gap-0" >
+        {
+          servicesData.map((service, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <section
+                key={service.id}
+                className="service-section py-20 border-t border-white/5 grid lg:grid-cols-2 gap-16 items-center"
+              >
+                {/* Content Side */}
+                <div className={`service-content flex flex-col gap-7 ${!isEven ? 'lg:order-2' : ''}`}>
+                  {/* Icon + badge */}
+                  <div className="flex items-center gap-4">
+                    <div className={`w-14 h-14 rounded-2xl ${service.bgClass} border ${service.borderClass} flex items-center justify-center flex-shrink-0`}>
+                      <service.icon className={`w-7 h-7 ${service.colorClass}`} />
+                    </div>
+                    <div>
+                      <p className={`text-xs font-bold uppercase tracking-widest ${service.colorClass} mb-1`}>
+                        Service {String(index + 1).padStart(2, '0')}
+                      </p>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white">{service.title}</h3>
+                    </div>
                   </div>
-                  <div>
-                    <p className={`text-xs font-bold uppercase tracking-widest ${service.colorClass} mb-1`}>
-                      Service {String(index + 1).padStart(2, '0')}
-                    </p>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">{service.title}</h3>
-                  </div>
-                </div>
 
-                <p className={`text-sm font-semibold uppercase tracking-widest ${service.colorClass}`}>
-                  {service.subtitle}
-                </p>
+                  <p className={`text-sm font-semibold uppercase tracking-widest ${service.colorClass}`}>
+                    {service.subtitle}
+                  </p>
 
-                <p className="text-gray-400 text-lg leading-relaxed">{service.description}</p>
+                  <p className="text-gray-400 text-lg leading-relaxed">{service.description}</p>
 
-                {/* Bullets */}
-                <ul className="flex flex-col gap-3">
-                  {service.bullets.map(b => (
-                    <li key={b} className="flex items-start gap-3">
-                      <CheckCircle2 className={`w-5 h-5 ${service.colorClass} flex-shrink-0 mt-0.5`} />
-                      <span className="text-gray-300 text-sm">{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                  {/* Bullets */}
+                  <ul className="flex flex-col gap-3">
+                    {service.bullets.map(b => (
+                      <li key={b} className="flex items-start gap-3">
+                        <CheckCircle2 className={`w-5 h-5 ${service.colorClass} flex-shrink-0 mt-0.5`} />
+                        <span className="text-gray-300 text-sm">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                {/* Stat + CTA */}
-                <div className="flex items-center gap-6 pt-2">
-                  <div className={`flex flex-col border-l-4 ${service.borderClass} pl-4`}>
-                    <span className={`text-3xl font-black ${service.colorClass}`}>{service.stat.value}</span>
-                    <span className="text-xs text-gray-500 uppercase tracking-widest">{service.stat.label}</span>
-                  </div>
-                  {/* <button className="ml-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/30 px-6 py-3 rounded-full">
+                  {/* Stat + CTA */}
+                  <div className="flex items-center gap-6 pt-2">
+                    <div className={`flex flex-col border-l-4 ${service.borderClass} pl-4`}>
+                      <span className={`text-3xl font-black ${service.colorClass}`}>{service.stat.value}</span>
+                      <span className="text-xs text-gray-500 uppercase tracking-widest">{service.stat.label}</span>
+                    </div>
+                    {/* <button className="ml-auto flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-400 hover:text-white transition-colors border border-white/10 hover:border-white/30 px-6 py-3 rounded-full">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </button> */}
+                  </div>
                 </div>
-              </div>
 
-              {/* Visual Side */}
-              <div className={`service-visual h-[380px] ${!isEven ? 'lg:order-1' : ''}`}>
-                {service.visual}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+                {/* Visual Side */}
+                <div className={`service-visual h-[380px] ${!isEven ? 'lg:order-1' : ''}`}>
+                  {service.visual}
+                </div>
+              </section>
+            );
+          })
+        }
+      </div >
 
       {/* ─── TRUST SECTION ─── */}
-      <section className="trust-section py-20 border-t border-white/5 bg-white/[0.015]">
+      < section className="trust-section py-20 border-t border-white/5 bg-white/[0.015]" >
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
           <div className="trust-item flex items-center gap-8 border-r border-white/10 pr-12 last:border-0">
-            <div className="flex flex-col items-center flex-shrink-0">
+            {/* <div className="flex flex-col items-center flex-shrink-0">
               <div className="flex gap-1 mb-1 items-end">
                 <div className="w-4 h-1.5 bg-red-400" /><div className="w-4 h-2.5 bg-yellow-400" /><div className="w-4 h-1.5 bg-orange-400" />
               </div>
               <span className="text-5xl font-black text-white leading-none">334<span className="text-lg align-top ml-1 opacity-50">TH</span></span>
               <span className="text-xs font-bold tracking-[0.3em] uppercase mt-2 opacity-50">IN USA</span>
-            </div>
+            </div> */}
             <div className="flex flex-col gap-2">
               <h4 className="text-xl font-bold text-white">Your Profit is My Priority</h4>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Most agencies just talk about clicks. Sellorix actually talks about profit. In just 4 months, my ACOS dropped by 15% while our organic ranking hit the top of Page 1. Truly a seller's agency.
+                Most agencies just talk about clicks. Sellorix actually talks about profit. In just 90  Days, my ACOS dropped by 15% while our organic ranking hit the top of Page 1. Truly a seller's agency.
               </p>
             </div>
           </div>
           <div className="trust-item flex items-center gap-8">
             <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-orange-500/30 flex-shrink-0 bg-white/5">
-              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimonial" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
+              <img src="../assets/Sophia Wilson.jpeg" alt="Testimonial" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex gap-1">
@@ -734,10 +737,10 @@ const FullServiceManagement = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* ─── BOTTOM FEATURES GRID ─── */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+      < section className="py-24 px-6 md:px-12 max-w-7xl mx-auto" >
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
           Built on <span className="text-orange-500"> real-world results</span>
         </h2>
@@ -757,10 +760,10 @@ const FullServiceManagement = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section >
 
       {/* ─── CTA BANNER ─── */}
-      <section className="py-24 px-6 md:px-12">
+      < section className="py-24 px-6 md:px-12" >
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-orange-500/10 to-transparent border border-orange-500/20 rounded-3xl p-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(249,91,7,0.08),_transparent_70%)]" />
           <div className="relative z-10">
@@ -776,9 +779,9 @@ const FullServiceManagement = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 };
 

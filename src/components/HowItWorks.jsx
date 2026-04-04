@@ -72,9 +72,9 @@ const HowItWorks = () => {
           <span className="text-orange-500 font-bold tracking-[0.2em] text-sm uppercase mb-6 block">
             How It Works
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight max-w-4xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight max-w-4xl mx-auto text-yellow-400">
             From Onboarding<br />
-            to Revenue Growth
+            To Revenue Growth
           </h2>
           <p className="text-gray-400 text-xl md:text-2xl max-w-2xl font-light mx-auto">
             A proven 3-phase framework that takes your brand from audit to scale.
