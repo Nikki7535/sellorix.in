@@ -2,7 +2,12 @@ import React, { useEffect } from 'react';
 import { ArrowRightCircle, ArrowUpRight, TrendingUp, BarChart3, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
 import amazonHero from '../assets/lady_wala.png';
-
+import case1 from '../assets/case_1.png';
+import case2 from '../assets/case_2.png';
+import case3 from '../assets/case_3.png';
+import case4 from '../assets/case_4.png';
+import case5 from '../assets/case_5.png';
+import case6 from '../assets/case_6.png';
 import { Link } from 'react-router-dom';
 
 const CaseStudies = () => {
@@ -32,7 +37,7 @@ const CaseStudies = () => {
       brand: "Chirp",
       growth: "519%",
       label: "Growth to Date",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case1,
       desc: "Sustained revenue increase since partnering with My Amazon Guy",
       color: "text-green-400",
       link: "/case-study/chirp"
@@ -41,7 +46,7 @@ const CaseStudies = () => {
       brand: "Stamp Hub",
       growth: "293%",
       label: "Higher Monthly Revenue",
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case2,
       desc: "A huge jump in sales coming from a revamp of various creative assets and improved PPC ads.",
       color: "text-green-400",
       link: "/case-study/stamp-hub"
@@ -50,7 +55,7 @@ const CaseStudies = () => {
       brand: "Tent and Table",
       growth: "167%",
       label: "Higher Revenue YoY",
-      image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case3,
       desc: "Year-over-year growth achieved in June 2022 compared to June 2021 under MAG management.",
       color: "text-green-400",
       link: "/case-study/tent-and-table"
@@ -59,7 +64,7 @@ const CaseStudies = () => {
       brand: "Heavenly Hunks",
       growth: "60%",
       label: "Higher Sales",
-      image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case4,
       desc: "Notable growth compared to the same month in 2022 after MAG management",
       color: "text-green-400",
       link: "/case-study/heavenly-hunks"
@@ -68,7 +73,7 @@ const CaseStudies = () => {
       brand: "Pillowflex",
       growth: "50%",
       label: "Sales Increase",
-      image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case5,
       desc: "2023 sales volume show a notable rise from the previous year, reflecting huge growth.",
       color: "text-green-400",
       link: "/case-study/pillowflex"
@@ -77,7 +82,7 @@ const CaseStudies = () => {
       brand: "Chinook Seedery",
       growth: "215%",
       label: "Increase in Sales",
-      image: "https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?q=80&w=600&h=400&auto=format&fit=crop",
+      image: case6,
       desc: "Current average weekly sales are 215% higher compared to 2020.",
       color: "text-green-400",
       link: "/case-study/chinook-seedery"

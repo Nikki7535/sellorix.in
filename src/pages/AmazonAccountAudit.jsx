@@ -107,11 +107,11 @@ const AmazonAccountAudit = () => {
 
         <div className="flex flex-col gap-6 z-10">
           <h1 className="anim-up text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-white mb-2">
-            Amazon account <br className="hidden md:block" />
-            <span className="text-yellow-500">audit</span>
+            Amazon Account <br className="hidden md:block" />
+            <span className="text-yellow-500">Audit</span>
           </h1>
           <p className="anim-up text-gray-400 text-lg leading-relaxed max-w-lg mb-2">
-            <strong className="text-white block mb-1">Get a free Amazon audit for 90 days.</strong>
+            <strong className="text-white block mb-1">Get a free Amazon audit within 24 to 48 hours</strong>
             Every Amazon expert reviews your account to give you a very detailed and actionable plan of your overall performance matrix.
           </p>
 
@@ -131,7 +131,7 @@ const AmazonAccountAudit = () => {
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
 
               <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-black px-8 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-yellow-500/20 whitespace-nowrap">
-                Get an Account Audit
+                <a href='https://www.linkedin.com/in/amitkushwaha12/'>Get an Account Audit</a>
               </button>
             </div>
           </div>
@@ -216,9 +216,12 @@ const AmazonAccountAudit = () => {
       </section>
 
       {/* ─── 7-ITEM ENHANCE GRID ─── */}
+
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-32">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
         <div className="text-center max-w-3xl mx-auto mb-16 scroll-fade-up">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Enhance overall <span className="text-yellow-500">performance</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Enhance Overall <span className="text-yellow-500">Performance</span></h2>
           <p className="text-gray-400 text-lg">
             Our review evaluates practically every pillar of health running in your account right now across an extensive audit advantageously crafted for scale.
           </p>
@@ -279,7 +282,7 @@ const AmazonAccountAudit = () => {
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
 
               <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-black px-10 py-3.5 rounded-full transition-all shadow-xl shadow-yellow-500/20 whitespace-nowrap active:scale-95 text-lg">
-                Get an Account Audit
+                <a href="https://www.linkedin.com/in/amitkushwaha12/"> Get an Account Audit</a>
               </button>
             </div>
           </div>

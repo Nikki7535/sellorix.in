@@ -105,6 +105,7 @@ const Hero = () => {
           {/* Social proof row */}
           <div className="hero-left-child flex items-center gap-4 pt-2">
             <div className="flex -space-x-3">
+
               {['A', 'B', 'C', 'D'].map((l) => (
                 <div key={l} className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 border-2 border-gray-950 flex items-center justify-center text-white text-xs font-bold">{l}</div>
               ))}

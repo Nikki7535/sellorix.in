@@ -12,8 +12,10 @@ const ContactUs = () => {
 
       {/* FAQ or Additional Contact Info */}
       <section className="py-20 px-6 md:px-12 bg-gray-900/30">
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-yellow-400">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm">
               <h3 className="text-xl font-bold mb-3 text-white">How do you lower ACOS and improve ROAS for my Amazon campaigns?</h3>

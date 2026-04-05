@@ -8,7 +8,7 @@ import p4 from '../assets/p4.png';
 import newP1 from '../assets/new_P1.png';
 import newP2 from '../assets/new_p2.png';
 import mainlogo from '../assets/main_logo1.png';
-// import sophia from '../assets/Sophia Wilson.jpeg';
+import sophia from '../assets/Sophia Wilson.jpeg';
 import {
   ChevronLeft, ChevronRight, MapPin, Clock, Globe, ArrowRight,
   MousePointer2, Settings, Image as ImageIcon, Search, Megaphone,
@@ -566,8 +566,13 @@ const FullServiceManagement = () => {
         </div>
       </section >
 
+
       {/* ─── ROADMAP ICON GRID ─── */}
+
       < section className="py-24 px-6 md:px-12 max-w-7xl mx-auto" >
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
             The Profit-First Roadmap to{' '}
@@ -721,7 +726,7 @@ const FullServiceManagement = () => {
           </div>
           <div className="trust-item flex items-center gap-8">
             <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-orange-500/30 flex-shrink-0 bg-white/5">
-              <img src="../assets/Sophia Wilson.jpeg" alt="Testimonial" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
+              <img src={sophia} alt="Testimonial" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" />
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex gap-1">
@@ -731,9 +736,9 @@ const FullServiceManagement = () => {
                 "The team grew our Amazon revenue by 3× in just 8 months. Best investment we've made."
               </p>
               <p className="text-xs font-bold text-gray-500">— Sarah K., Brand Owner</p>
-              <button className="flex items-center gap-2 text-orange-400 text-xs font-bold hover:text-orange-300 transition-colors uppercase tracking-wider mt-1">
+              {/* <button className="flex items-center gap-2 text-orange-400 text-xs font-bold hover:text-orange-300 transition-colors uppercase tracking-wider mt-1">
                 Read Success Stories <ArrowRight className="w-3 h-3" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -742,7 +747,7 @@ const FullServiceManagement = () => {
       {/* ─── BOTTOM FEATURES GRID ─── */}
       < section className="py-24 px-6 md:px-12 max-w-7xl mx-auto" >
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-          Built on <span className="text-orange-500"> real-world results</span>
+          Built On <span className="text-orange-500"> Real-World Results</span>
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -768,14 +773,14 @@ const FullServiceManagement = () => {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(249,91,7,0.08),_transparent_70%)]" />
           <div className="relative z-10">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ready to grow your<br />
+              Ready To Grow Your<br />
               <span className="text-orange-500">Amazon business?</span>
             </h2>
             <p className="text-gray-400 text-lg mb-10">
-              Schedule a free strategy call with one of our Amazon account executives.
+              Schedule a free strategy direct call with our founder.
             </p>
             <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-14 py-5 rounded-full transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/30 text-lg">
-              Book Your Free Audit
+              <a href="https://calendly.com/amitkushwaha/new-meeting">Book Your Free Audit</a>
             </button>
           </div>
         </div>

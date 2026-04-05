@@ -225,6 +225,8 @@ const Testimonials = () => {
       {/* Results Banner */}
       <div className="stats-banner relative py-20 px-6">
         <div className="absolute inset-0 bg-[#000] origin-bottom scale-y-100" />
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
 
         {/* Curved Divider effect */}
         <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[20px] border-dark-bg" />
@@ -252,7 +254,7 @@ const Testimonials = () => {
         </div>
 
         {/* Pointed down arrow effect */}
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[25px] border-black" />
+        <div className="" />
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Email Us</p>
-                <p className="font-semibold">hello@sellorix.com</p>
+                <p className="font-semibold">info.sellorix@gmail.com</p>
               </div>
             </div>
             <div className="contact-item flex items-center gap-4">
@@ -49,8 +49,9 @@ const Contact = () => {
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Call Us</p>
+                <p className="text-sm text-gray-500">What's App</p>
                 <p className="font-semibold">+977 981-9297180</p>
+                <p className="font-semibold">+919113681461</p>
               </div>
             </div>
             <div className="contact-item flex items-center gap-4">
@@ -59,7 +60,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Visit Us</p>
-                <p className="font-semibold">100 Innovation Drive, Tech City</p>
+                <p className="font-semibold">Wyoming,USA</p>
               </div>
             </div>
           </div>

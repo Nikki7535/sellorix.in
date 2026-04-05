@@ -18,6 +18,8 @@ const TikTokIcon = () => (
 const Footer = () => {
   return (
     <footer className="w-full bg-dark-bg border-t border-white/5 pt-20 pb-12 px-6 md:px-12 relative z-10 overflow-hidden">
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
       {/* Decorative Gradient Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent"></div>
 

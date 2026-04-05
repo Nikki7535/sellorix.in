@@ -143,10 +143,10 @@ const AmazonSeo = () => {
 
           <div className="anim-up mt-4 flex items-center gap-4">
             <button className="bg-yellow-500 hover:bg-yellow-400 text-black font-black px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/20 text-lg">
-              Get a free Audit
+              <a href="https://calendly.com/amitkushwaha/new-meeting">Get a free Audit</a>
             </button>
             <span className="text-sm font-bold text-orange-400 flex items-center gap-2 cursor-pointer hover:text-orange-300 transition-colors">
-              <PlayCircle className="w-5 h-5" /> Start the 90-day SEO growth map
+              <PlayCircle className="w-5 h-5" /> <a href="https://www.linkedin.com/in/amitkushwaha12/">Start the 90-day SEO growth map</a>
             </span>
           </div>
         </div>
@@ -257,8 +257,11 @@ const AmazonSeo = () => {
       </section>
 
       {/* ─── WIN ON AMAZON (4 GRID) ─── */}
+
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-32 scroll-fade-up text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Win on Amazon, dominate <span className="text-yellow-500">Amazon SEO</span></h2>
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/15 blur-[120px] rounded-full pointer-events-none" />
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Win on Amazon, Dominate <span className="text-yellow-500">Amazon SEO</span></h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-16">
           Amazon SEO is an interconnected web of conversion and rank velocity metrics. We optimize the full funnel to guarantee your organic search rankings.
         </p>
@@ -285,7 +288,7 @@ const AmazonSeo = () => {
             <p className="text-black/80 font-semibold mb-2">We analyze indexing errors, algorithm shifts, and ranking suppressions to get you back on page one.</p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <button className="bg-black text-white hover:bg-gray-900 font-bold px-8 py-3.5 rounded-full text-sm flex items-center gap-2 transition-transform hover:scale-105 shadow-xl">
-                <Target className="w-4 h-4" /> Book a free strategy session
+                <Target className="w-4 h-4" /> <a href='https://calendly.com/amitkushwaha/new-meeting'>Book a free strategy session</a>
               </button>
               <span className="text-black font-black text-xs uppercase tracking-widest flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" /> Get back on page 1
@@ -352,7 +355,7 @@ const AmazonSeo = () => {
               With our data generation, rest assured every base is covered.
             </p>
             <button className="bg-white text-black font-black uppercase text-xs tracking-widest px-8 py-4 rounded-full w-fit hover:bg-gray-100 transition-colors shadow-lg shadow-black/10">
-              Request a free quote
+              <a href='https://www.linkedin.com/in/amitkushwaha12/'>Request a free quote</a>
             </button>
             <p className="text-[10px] uppercase font-bold text-black/50 mt-8 tracking-widest flex items-center gap-1">
               <Target className="w-3 h-3" /> Get it right, early
